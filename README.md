@@ -28,6 +28,18 @@ This is a simple Spring Boot web application demonstrating basic Spring MVC feat
   3. The result is calculated and passed to the view using `ModelAndView`.
   4. The result is displayed in the `result.jsp` view.
 
+## How `@ModelAttribute` Works
+
+The `@ModelAttribute` annotation in Spring MVC can be used in two ways:
+
+1. **Binding Form Data to Model Objects**:
+   - In the `addAlien` method, the form data (`aname`, `aid`) is automatically mapped to the `Alien` object. 
+   - The `Alien` object is then passed to the `result.jsp` view.
+
+2. **Providing Additional Model Data Globally**:
+   - The `@ModelAttribute("course")` method is used to provide the course name ("Java") to all views, making it accessible in the JSP pages.
+
+
 ## Requirements
 
 - JDK 11 or later
